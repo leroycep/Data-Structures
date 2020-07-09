@@ -1,18 +1,41 @@
-Answer the following questions for each of the data structures you implemented as part of this project.
+Answer the following questions for each of the data structures you implemented
+as part of this project.
 
 ## Stack
 
 1. What is the runtime complexity of `push` using a list?
 
+   - O(1), amortized
+   - Individual operations can be O(n), though this usually doesn't matter
+     unless you are building a real-time system or something
+
 2. What is the runtime complexity of `push` using a linked list?
+
+   - O(1), always
 
 3. What is the runtime complexity of `pop` using a list?
 
+   - O(1), always
+   - This is only true because python lists don't move a list when the size is
+     reduced, only when it's potential capacity needs to increase. If this
+     wasn't the case, and it always moved the list to an exact size allocation,
+     it would be O(n).
+
 4. What is the runtime complexity of `pop` using a linked list?
+
+   - O(1), always
 
 5. What is the runtime complexity of `len` using a list?
 
+   - O(1), always
+   - Lists are a pointer + a length. If it was a terminated with a sentinal
+     instead of storing length, it would be O(n)
+
 6. What is the runtime complexity of `len` using a linked list?
+
+   - O(n)
+   - This could easily be O(1) if the length of the LinkedList was stored and
+     maintained
 
 ## Queue
 
@@ -50,18 +73,20 @@ Answer the following questions for each of the data structures you implemented a
 
 10. What is the runtime complexity of `DoublyLinkedList.delete`?
 
-    a. Compare the runtime of the doubly linked list's `delete` method with the worst-case runtime of the JS `Array.splice` method. Which method generally performs better?
+    a. Compare the runtime of the doubly linked list's `delete` method with the
+    worst-case runtime of the JS `Array.splice` method. Which method generally
+    performs better?
 
 ## Binary Search Tree
 
-1. What is the runtime complexity of `insert`? 
+1. What is the runtime complexity of `insert`?
 
 2. What is the runtime complexity of `contains`?
 
-3. What is the runtime complexity of `get_max`? 
+3. What is the runtime complexity of `get_max`?
 
 4. What is the runtime complexity of `for_each`?
-    
+
 ## Heap
 
 1. What is the runtime complexity of `_bubble_up`?
