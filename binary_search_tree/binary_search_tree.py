@@ -1,3 +1,5 @@
+from queue import SimpleQueue
+
 """
 Binary search trees are a data structure that enforce an ordering over 
 the data they store. That ordering in turn makes it a lot more efficient 
@@ -9,6 +11,8 @@ This part of the project comprises two days:
 2. Implement the `in_order_print`, `bft_print`, and `dft_print` methods
    on the BSTNode class.
 """
+
+
 class BSTNode:
     def __init__(self, value):
         self.value = value
@@ -59,17 +63,32 @@ class BSTNode:
     # Print all the values in order from low to high
     # Hint:  Use a recursive, depth first traversal
     def in_order_print(self, node):
-        pass
+        self.for_each(lambda x: print(f"{x}"))
 
     # Print the value of every node, starting with the given node,
     # in an iterative breadth first traversal
     def bft_print(self, node):
-        pass
+        node_queue = SimpleQueue()
+        node_queue.put(self)
+        while not node_queue.empty():
+            current = node_queue.get()
+            print(f"{current.value}")
+            if current.left:
+                node_queue.put(current.left)
+            if current.right:
+                node_queue.put(current.right)
 
     # Print the value of every node, starting with the given node,
     # in an iterative depth first traversal
     def dft_print(self, node):
-        pass
+        node_stack = [self]
+        while len(node_stack) > 0:
+            current = node_stack.pop()
+            print(f"{current.value}")
+            if current.left:
+                node_stack.append(current.left)
+            if current.right:
+                node_stack.append(current.right)
 
     # Stretch Goals -------------------------
     # Note: Research may be required
