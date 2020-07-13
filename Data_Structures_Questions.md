@@ -41,15 +41,33 @@ as part of this project.
 
 1. What is the runtime complexity of `enqueue` using a list?
 
+   - I will assume that `enqueue` appends to the end of the list
+   - The runtime complexity is O(n)
+   - Amortized (on average) the runtime is O(1) though
+
 2. What is the runtime complexity of `enqueue` using a linked list?
+
+   - O(1)
 
 3. What is the runtime complexity of `dequeue` using a list?
 
+   - I will assume that `dequeue` removes from the beginning of the list
+   - The runtime complexity is O(n)
+
 4. What is the runtime complexity of `dequeue` using a linked list?
+
+   - The runtime complexity is O(1)
 
 5. What is the runtime complexity of `len` using a list?
 
+   - The runtime complexity is O(1)
+
 6. What is the runtime complexity of `len` using a linked list?
+
+   - The runtime complexity is O(1)
+   - This assumes that you are storing the length of the linked list somewhere.
+       - I think this is reasonable because the list also keeps track of its length
+   - If the size is not stored, the runtime complexity of `len` is O(n)
 
 ## Doubly Linked List
 
