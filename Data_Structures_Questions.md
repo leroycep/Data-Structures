@@ -149,10 +149,31 @@ as part of this project.
 
 1. What is the runtime complexity of `_bubble_up`?
 
+   - It is O(log n)
+   - Technically, it is O(height of tree). However, since the internal tree is never
+     taller than it needs to be, it is equivalent to the height of a balanced
+     tree, which is `log n`
+
 2. What is the runtime complexity of `_sift_down`?
+
+   - It is O(log n)
+   - Technically, it is O(height of tree). However, since the internal tree is never
+     taller than it needs to be, it is equivalent to the height of a balanced
+     tree, which is `log n`
 
 3. What is the runtime complexity of `insert`?
 
+   - O(n)
+   - Average case will be O(log n), since appending to the list is O(1) amortized
+   - `_sift_down` is O(log n), but appending to the list is O(n) worst case
+
 4. What is the runtime complexity of `delete`?
 
+   - O(log n)
+   - Removing a value from the array is O(1), but `_sift_down` is O(log n)
+
 5. What is the runtime complexity of `get_max`?
+
+   - O(1)
+   - It just retrieves the first element of the heap
+
