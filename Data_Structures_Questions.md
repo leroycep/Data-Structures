@@ -122,11 +122,28 @@ as part of this project.
 
 1. What is the runtime complexity of `insert`?
 
+   - The runtime complexity is O(h), where h is the height of the tree
+   - If the tree is balanced, this means that `insert` is O(log n)
+   - In the worst case, it becomes a linked list without a
+     pointer to the end of the list, making it O(n)
+
 2. What is the runtime complexity of `contains`?
+
+   - The runtime complexity is O(h), where h is the height of the tree
+   - If the tree is balanced, this means that `insert` is O(log n)
+   - In the worst case, it becomes a linked list without a
+     pointer to the end of the list, making it O(n)
 
 3. What is the runtime complexity of `get_max`?
 
+   - The runtime complexity is O(h), where h is the height of the tree
+   - If the tree is balanced, this means that `insert` is O(log n)
+   - In the worst case, it becomes a linked list without a
+     pointer to the end of the list, making it O(n)
+
 4. What is the runtime complexity of `for_each`?
+
+   - The runtime complexity is O(n)
 
 ## Heap
 
