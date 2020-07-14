@@ -11,7 +11,7 @@ return elements in Last In First Out order.
    implementing a Stack?
    - Inserting adding a node to the LinkedList is O(1), whereas appending to an array is O(n), though it is amortized to be O(1)
 """
-from singly_linked_list.singly_linked_list import LinkedList
+from singly_linked_list import LinkedList
 
 
 class Stack:
